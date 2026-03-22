@@ -1,0 +1,58 @@
+<header class="bg-dark-bg text-light-text sticky top-0 z-50 shadow-md">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold tracking-tighter">
+      ACSousa<span class="text-accent-yellow">.DEV</span>
+    </div>
+
+    <div class="hidden lg:flex items-center space-x-8">
+      @for (item of navItems; track item.name) {
+        <a [href]="item.link" class="hover:text-accent-yellow transition-colors duration-300">
+          {{ item.name }}
+        </a>
+      }
+      <a
+        href="cv.pdf"
+        download="Curriculo_Augusto_Cesar.pdf"
+        class="bg-accent-yellow text-dark-bg font-bold py-2 px-5 rounded-lg hover:brightness-110 transition-all inline-block text-center"
+      >
+        Download CV
+      </a>
+    </div>
+
+    <div class="lg:hidden flex items-center">
+      <button (click)="toggleMenu()" class="text-light-text focus:outline-none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  @if (isMenuOpen) {
+    <div class="lg:hidden bg-dark-bg border-t border-purple-900 px-6 py-4 space-y-4">
+      @for (item of navItems; track item.name) {
+        <a [href]="item.link" (click)="isMenuOpen = false" class="block hover:text-accent-yellow">
+          {{ item.name }}
+        </a>
+      }
+      <a
+        href="cv.pdf"
+        download="Curriculo_Augusto_Cesar.pdf"
+        class="block w-full bg-accent-yellow text-dark-bg font-bold py-3 rounded-lg text-center"
+      >
+        Download CV
+      </a>
+    </div>
+  }
+</header>
