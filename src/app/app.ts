@@ -10,7 +10,6 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
   template: `
     <app-main-layout />
     <router-outlet />
-    <p>Projeto em construção</p>
   `,
 })
 export class App {
