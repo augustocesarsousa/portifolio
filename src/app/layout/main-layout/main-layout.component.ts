@@ -6,6 +6,7 @@ import { AboutComponent } from '../../features/about/about.component';
 import { SkillsComponent } from '../../features/skills/skills.component';
 import { ProjectsComponent } from '../../features/projects/projects.component';
 import { ContactComponent } from '../../features/contact/contact.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-main-layout',
@@ -17,6 +18,7 @@ import { ContactComponent } from '../../features/contact/contact.component';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
+    FooterComponent,
   ],
   templateUrl: './main-layout.component.html',
   styles: `
