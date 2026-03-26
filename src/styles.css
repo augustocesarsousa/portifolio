@@ -7,3 +7,31 @@
   --color-light-text: #e3e3e3;
   --color-accent-yellow: #dbcd00;
 }
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.3s ease-out;
+}
+
+button,
+a {
+  cursor: pointer;
+  touch-action: manipulation; /* Otimiza o clique em telas touch */
+}
+
+/* Garante que o header e seus filhos fiquem sempre visíveis sobre o conteúdo */
+app-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
