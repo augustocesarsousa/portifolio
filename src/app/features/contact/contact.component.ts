@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [ScrollRevealDirective],
   templateUrl: './contact.component.html',
   styles: `
     :host {
@@ -10,6 +11,4 @@ import { Component } from '@angular/core';
     }
   `,
 })
-export class ContactComponent {
-
-}
+export class ContactComponent {}

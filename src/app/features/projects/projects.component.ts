@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Project } from '../../shared/interfaces/project.interface';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [ScrollRevealDirective],
   templateUrl: './projects.component.html',
   styles: `
     :host {
