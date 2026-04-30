@@ -50,5 +50,17 @@ export class ProjectsComponent {
         'Ambiente containerizado com Docker',
       ],
     },
+    {
+      title: 'Blackjack',
+      description: 'Projeto fullstack que simula o clássico jogo de cartas Blackjack.',
+      technologies: ['Java', 'Quarkus', 'Angular 21', 'Tailwind CSS', 'Docker', 'Docker Compose'],
+      githubUrl: 'https://github.com/augustocesarsousa/blackjack',
+      highlights: [
+        'Arquitetura limpa, separação entre Use Cases, Domain Entities e Web Resources',
+        'Gerenciamento de estado da aplicação',
+        'Testes unitários no backend com RestAssured e Mockito',
+        'Tailwind CSS, interface responsiva com foco em Mobile First',
+      ],
+    },
   ];
 }
